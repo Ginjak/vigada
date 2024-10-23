@@ -1,0 +1,123 @@
+:root {
+  --brown: #4a2628;
+  --brown-hover: #643537;
+  --green: #349e00;
+  --humble-black: #1d1e1c;
+  --white: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", serif;
+}
+
+a {
+  text-decoration: none;
+}
+/* Utility */
+.fs-14 {
+  font-size: 14px;
+}
+
+.lh-25 {
+  line-height: 25px;
+}
+
+.btn-main {
+  padding: 12px 24px;
+  border-radius: 42px;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.btn-white,
+.btn-white a {
+  background: var(--white);
+  border-color: var(--brown);
+  color: var(--brown);
+  transition: all 0.2s linear;
+}
+.btn-white:hover,
+.btn-white:hover a {
+  background: var(--brown-hover);
+  border-color: var(--brown-hover);
+  color: var(--white);
+  transition: all 0.2s linear;
+}
+
+.btn-dark,
+.btn-dark a {
+  background: var(--brown);
+  border-color: var(--brown);
+  color: var(--white);
+  transition: all 0.2s linear;
+}
+
+.btn-dark:hover,
+.btn-dark:hover a {
+  background: var(--brown-hover);
+  border-color: var(--brown-hover);
+  color: var(--white);
+  transition: all 0.2s linear;
+}
+/* Header */
+
+/* --------- Navigation -----------*/
+
+/* Logo */
+.navbar-brand {
+  max-width: 182px;
+}
+
+/* Nav */
+#navigation .nav-link {
+  color: var(--humble-black);
+}
+
+#navigation .nav-link.active {
+  font-weight: 600;
+}
+
+#navigation .menu-cart {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  background: var(--brown);
+  transition: background 0.2s linear;
+}
+
+#navigation .menu-cart:hover {
+  background: var(--brown-hover);
+  transition: background 0.2s linear;
+}
+
+#navigation .nav-user-wraper {
+  gap: 40px;
+}
+#navigation .menu-cart .menu-cart-ico {
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 2px);
+  transform: translate(-50%, -50%);
+}
+
+#navigation .menu-cart .cart-items {
+  color: var(--white);
+  font-size: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 50%;
+  background: var(--brown);
+  width: 10px;
+  height: 10px;
+  top: 10px;
+  right: 8px;
+  border: 1px solid var(--white);
+}

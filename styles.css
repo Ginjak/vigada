@@ -20,16 +20,66 @@ body {
 a {
   text-decoration: none;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: var(--humble-black);
+}
 /* Utility */
+.fs-69 {
+  font-size: 69px;
+}
+
+.fs-48 {
+  font-size: 48px;
+}
+.fs-26 {
+  font-size: 26px;
+}
+.fs-22 {
+  font-size: 22px;
+}
 .fs-14 {
   font-size: 14px;
 }
+.lh-90 {
+  line-height: 90px;
+}
 
+.lh-57 {
+  line-height: 57px;
+}
+.lh-46 {
+  line-height: 46px;
+}
+.lh-33 {
+  line-height: 33px;
+}
 .lh-25 {
   line-height: 25px;
 }
 
+.max-w-998 {
+  max-width: 998px;
+}
+.max-w-566 {
+  max-width: 566px;
+}
+
+.mb-65 {
+  margin-bottom: 65px;
+}
+
+.brown {
+  color: var(--brown);
+}
 .btn-main {
+  display: inline-block;
   padding: 12px 24px;
   border-radius: 42px;
   border-width: 1px;
@@ -168,6 +218,18 @@ a {
 .mobile-menu .nav-item {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+/* Hero section */
+
+#hero {
+  padding: 40px 0 60px 0;
+}
+
+/* Produktai section */
+#produktai {
+  padding: 40px 0;
+}
+
 /* Media queries */
 
 @media (max-width: 500px) {

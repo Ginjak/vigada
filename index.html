@@ -15,7 +15,10 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./styles.css" />
     <title>Vigada</title>
   </head>
@@ -93,11 +96,15 @@
       <section id="hero">
         <div class="container-xxl">
           <div class="row">
-            <div class="col-6">
-              <h1 class="title fs-69 lh-90 fw-bold mb-65 max-w-566">
+            <div
+              class="col-12 col-md-5 col-xl-6 text-center text-md-start mb-5 mb-md-0"
+            >
+              <h1
+                class="title fs-69 lh-90 fw-bold mb-65 max-w-566 text-center text-md-start"
+              >
                 Medinių amatų ir gaminių specialistai
               </h1>
-              <p class="fs-26 lh-46 max-w-566 mb-65">
+              <p class="fs-26 lh-46 max-w-566 mb-65 text-center text-md-start">
                 UAB "Vigada" yra patyrusių statybos ir renovacijos specialistų
                 komanda, teikianti paslaugas Lietuvoje nuo 2008 metų
               </p>
@@ -105,7 +112,41 @@
                 <a href="#" class="btn-main btn-dark">Daugiau apie mus</a>
               </div>
             </div>
-            <div class="col-6">tea</div>
+            <div class="col-12 col-md-7 col-xl-6 slider-wraper">
+              <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <img src="./img/slider_img.webp" alt="" class="img-fluid" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/slider_img.webp" alt="" class="img-fluid" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/slider_img.webp" alt="" class="img-fluid" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/slider_img.webp" alt="" class="img-fluid" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/slider_img.webp" alt="" class="img-fluid" />
+                  </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-controls position-relative d-flex">
+                  <div class="swiper-pagination"></div>
+
+                  <!-- If we need navigation buttons -->
+                  <div class="swiper-button-prev">
+                    <img src="./icons/arrow_left.svg" alt="" />
+                  </div>
+                  <div class="swiper-button-next">
+                    <img src="./icons/arrow_right.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -120,15 +161,256 @@
           >
             Sukurti iš gamtos, skirti ilgaamžiškumui ir elegancijai
           </h2>
-          <p class="text-center">
+          <p class="text-center fs-22 max-w-998 m-auto">
             Mūsų kvalifikuota komanda užtikrina tikslų medinių gaminių
             montavimą, pabrėždama funkcionalumą ir stilių. Pasitikėkite mumis
             sklandžiam ir efektyviam montavimui
           </p>
+          <!-- 650x432 -->
+          <div class="cards-wraper mt-5">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <div class="col">
+                <div class="card">
+                  <img src="./img/card_1.webp" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <div class="d-block mb-3">
+                      <a
+                        href="#"
+                        class="card-btn btn-green fs-14 fw-500 d-flex justify-content-between"
+                        >Mediniai langai
+                        <img src="./icons/button_arrow.svg" alt="..."
+                      /></a>
+                    </div>
+                    <h5 class="card-title fs-24 mb-0">
+                      Medinių langų montavimas ir transportavimas
+                    </h5>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card">
+                  <img src="./img/card_2.webp" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <div class="d-block mb-3">
+                      <a
+                        href="#"
+                        class="card-btn btn-green fs-14 fw-500 d-flex justify-content-between"
+                        >Medinė lenta
+                        <img src="./icons/button_arrow.svg" alt="..."
+                      /></a>
+                    </div>
+                    <h5 class="card-title fs-24 mb-0">
+                      Medinių lentų montavimas ir transportavimas
+                    </h5>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card">
+                  <img src="./img/card_3.webp" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <div class="d-block mb-3">
+                      <a
+                        href="#"
+                        class="card-btn btn-green fs-14 fw-500 d-flex justify-content-between"
+                        >Kategorija C
+                        <img src="./icons/button_arrow.svg" alt="..."
+                      /></a>
+                    </div>
+                    <h5 class="card-title fs-24 mb-0">
+                      Tech Talk: The Backbone of Cowork's Seamless Experience
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="./img/card_3.webp" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <div class="d-block mb-3">
+                      <a
+                        href="#"
+                        class="card-btn btn-green fs-14 fw-500 d-flex justify-content-between"
+                        >Kategorija D
+                        <img src="./icons/button_arrow.svg" alt="..."
+                      /></a>
+                    </div>
+                    <h5 class="card-title fs-24 mb-0">
+                      Tech Talk: The Backbone of Cowork's Seamless Experience
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="./img/card_3.webp" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <div class="d-block mb-3">
+                      <a
+                        href="#"
+                        class="card-btn btn-green fs-14 fw-500 d-flex justify-content-between"
+                        >Kategorija E
+                        <img src="./icons/button_arrow.svg" alt="..."
+                      /></a>
+                    </div>
+                    <h5 class="card-title fs-24 mb-0">
+                      Tech Talk: The Backbone of Cowork's Seamless Experience
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="./img/card_3.webp" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <div class="d-block mb-3">
+                      <a
+                        href="#"
+                        class="card-btn btn-green fs-14 fw-500 d-flex justify-content-between"
+                        >Kategorija J
+                        <img src="./icons/button_arrow.svg" alt="..."
+                      /></a>
+                    </div>
+                    <h5 class="card-title fs-24 mb-0">
+                      Tech Talk: The Backbone of Cowork's Seamless Experience
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="./img/card_2.webp" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <div class="d-block mb-3">
+                      <a
+                        href="#"
+                        class="card-btn btn-green fs-14 fw-500 d-flex justify-content-between"
+                        >Kategorija F
+                        <img src="./icons/button_arrow.svg" alt="..."
+                      /></a>
+                    </div>
+                    <h5 class="card-title fs-24 mb-0">
+                      Tech Talk: The Backbone of Cowork's Seamless Experience
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <!-- Section produktai pabaiga -->
     </main>
+    <!-- Footer pradzia -->
+    <footer>
+      <div class="container-xxl">
+        <div
+          class="footer-container px-3 py-4 p-sm-5 d-flex flex-column flex-lg-row gap-5"
+        >
+          <div
+            class="logo-newsletter-wraper d-flex flex-column gap-3 max-w-650"
+          >
+            <div>
+              <img src="./logo/logo_white.svg" alt="Vigada white logo" />
+            </div>
+            <p class="mb-0 fs-14">
+              Prisijunkite prie mūsų naujienlaiškio, kad būtumėte informuoti
+              apie naujausias funkcijas ir leidimus.
+            </p>
+            <form
+              class="newsletter-wraper d-flex flex-column flex-sm-row gap-4"
+            >
+              <label
+                for="email"
+                class="visually-hidden"
+                aria-label="El. pastas"
+              ></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="flex-grow-1"
+                placeholder="Įveskite savo el. paštą"
+              />
+              <button type="submit" class="footer-btn fs-14 fw-600">
+                Prenumeruoti
+              </button>
+            </form>
+            <p class="mb-0 fs-14">
+              Prenumeruodami sutinkate su mūsų privatumo politika ir suteikiate
+              sutikimą gauti naujienas iš mūsų įmonės
+            </p>
+          </div>
+          <div
+            class="links-wraper d-flex gap-4 gap-sm-2 justify-content-sm-between flex-wrap"
+          >
+            <div class="max-w-170">
+              <p class="mb-4 fs-12 fw-600 text-uppercase">Explore more</p>
+              <ul class="d-flex flex-column gap-3">
+                <li><a href="#" class="fs-14">Apie mus</a></li>
+                <li><a href="#" class="fs-14">Paslaugos</a></li>
+                <li><a href="#" class="fs-14">Darbų galerija</a></li>
+                <li><a href="#" class="fs-14">Kontaktai</a></li>
+                <li><a href="#" class="fs-14">ES parama</a></li>
+              </ul>
+            </div>
+            <div class="max-w-170">
+              <p class="mb-4 fs-12 fw-600 text-uppercase">Stay Connected</p>
+              <ul class="d-flex flex-column gap-3">
+                <li>
+                  <a href="mailto:info@vigada.lt" class="fs-14"
+                    >info@vigada.lt</a
+                  >
+                </li>
+                <li>
+                  <a href="tel:+37061865033" class="fs-14"
+                    >Tel. (+370 618) 650 33</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="fs-14"
+                    >Apaščios g. 35, Anglininkų k. LT-41105 Biržų raj.,
+                    Lietuva</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="max-w-170">
+              <p class="mb-4 fs-12 fw-600 text-uppercase">Follow Us</p>
+              <ul class="d-flex flex-column gap-3">
+                <li><a href="#" class="fs-14">Facebook</a></li>
+                <li><a href="#" class="fs-14">Instagram</a></li>
+                <li><a href="#" class="fs-14">LinkedIn</a></li>
+                <li><a href="#" class="fs-14">Youtube</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="footer-bottom d-flex flex-column flex-md-row justify-content-between gap-2 gap-md-0"
+        >
+          <p class="mb-0 fs-14">
+            &copy; 2015 - <span id="current-year"></span> UAB Vigada. All rights
+            reserved.
+          </p>
+          <ul class="d-flex gap-4">
+            <li>
+              <a href="#" class="fs-14"><u>Privacy policy</u></a>
+            </li>
+            <li>
+              <a href="#" class="fs-14"><u>Terms of Service</u></a>
+            </li>
+            <li>
+              <a href="#" class="fs-14"><u>Cookies Settings</u></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer pabaiga -->
+
     <!-- Outside of DOM elements -->
 
     <div
@@ -177,6 +459,7 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>

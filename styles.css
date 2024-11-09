@@ -2,9 +2,10 @@
   --brown: #4a2628;
   --brown-hover: #643537;
   --btn-green: #349e00;
+  --btn-ligth-green-border: rgba(52, 158, 0, 0.5);
   --btn-green-hover: #40bb03;
   --humble-black: #1d1e1c;
-  --footer-black: #1d1e1c;
+  --cart-black: #050505;
   --white: #fff;
   --grey: #667085;
   --ligth-grey: #f7f7f7;
@@ -39,7 +40,17 @@ ul {
   padding: 0;
   margin: 0;
 }
-/* Utility */
+/* Utilities */
+
+.cart-black-txt {
+  color: var(--cart-black);
+}
+.cart-green-txt {
+  color: var(--btn-green);
+}
+.cursor-pointer {
+  cursor: pointer;
+}
 .fs-69 {
   font-size: 69px;
 }
@@ -47,14 +58,23 @@ ul {
 .fs-48 {
   font-size: 48px;
 }
+.fs-30 {
+  font-size: 30px;
+}
 .fs-26 {
   font-size: 26px;
+}
+.fs-25 {
+  font-size: 25px;
 }
 .fs-24 {
   font-size: 24px;
 }
 .fs-22 {
   font-size: 22px;
+}
+.fs-20 {
+  font-size: 20px;
 }
 .fs-14 {
   font-size: 14px;
@@ -113,6 +133,14 @@ ul {
   border-width: 1px;
   border-style: solid;
 }
+.cart-btn {
+  min-width: 172px;
+  border-radius: 20px;
+  padding: 10px 24px;
+  border: none;
+  color: var(--white);
+  text-align: center;
+}
 .card-btn {
   border-radius: 10px;
   padding: 8px 12px;
@@ -121,13 +149,13 @@ ul {
 .footer-btn {
   padding: 12px 24px;
   border-radius: 42px;
-  border: 1px solid var(--footer-black);
+  border: 1px solid var(--humble-black);
   background: var(--white);
   transition: all 0.2s linear;
 }
 
 .footer-btn:hover {
-  background: var(--footer-black);
+  background: var(--humble-black);
   color: var(--white);
   border-color: var(--white);
 }
@@ -322,6 +350,77 @@ ul {
   background: var(--brown);
   border-radius: 20px;
 }
+/* Cart modal */
+#cartModal .modal-dialog {
+  max-width: 635px;
+  margin-right: 70px;
+  margin-top: 32px;
+}
+#cartModal .modal-content {
+  border-radius: 60px;
+  padding: 46px 40px;
+}
+#cartModal .modal-btn {
+  width: 28px;
+  height: 28px;
+  background: transparent url("./icons/modal_close_icon.svg") no-repeat;
+  border: none;
+  transition: opacity 0.2s linear;
+}
+#cartModal .modal-btn:hover {
+  opacity: 0.7;
+  transition: opacity 0.2s linear;
+}
+#cartModal .modal-header {
+  border: none;
+  padding: 0;
+  margin-bottom: 24px;
+}
+#cartModal .modal-body {
+  padding: 0;
+}
+#cartModal .product-item {
+  padding: 13px;
+  border-top: 2px solid var(--btn-ligth-green-border);
+}
+#cartModal .product-img {
+  max-width: 137px;
+}
+#cartModal .info-icon img,
+#cartModal .trash-icon img {
+  max-width: 28px;
+}
+
+#cartModal .info-icon,
+#cartModal .trash-icon {
+  max-height: 34px;
+  transition: opacity 0.2s linear;
+}
+#cartModal .info-icon:hover,
+#cartModal .trash-icon:hover {
+  opacity: 0.6;
+  transition: opacity 0.2s linear;
+}
+#cartModal .modal-footer {
+  border-top: 2px solid var(--btn-ligth-green-border);
+
+  padding: 0;
+}
+#cartModal .modal-footer .total-price {
+  max-width: 450px;
+  width: 100%;
+  padding: 24px 0;
+}
+#cartModal .btn-actions-wraper {
+  border-top: 2px solid var(--btn-ligth-green-border);
+  padding-top: 40px;
+}
+#cartModal .btn-actions-wraper a,
+#cartModal .btn-actions-wraper a:active,
+#cartModal .btn-actions-wraper a:focus,
+#cartModal .btn-actions-wraper a:visited {
+  color: var(--white);
+}
 
 /* Produktai section */
 #produktai {
@@ -349,7 +448,7 @@ ul {
 
 footer .footer-container {
   border-radius: 48px;
-  background: var(--footer-black);
+  background: var(--humble-black);
 }
 
 footer p,
@@ -451,6 +550,9 @@ footer .footer-bottom a:hover {
   #hero .max-w-566 {
     max-width: 100% !important;
   }
+  #cartModal .modal-dialog {
+    margin-right: auto;
+  }
 }
 
 @media (max-width: 576px) {
@@ -499,6 +601,14 @@ footer .footer-bottom a:hover {
     flex-direction: column;
     gap: 8px !important;
   }
+  #cartModal .modal-dialog {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  #cartModal .modal-content {
+    border-radius: 0;
+  }
 }
 @media (max-width: 500px) {
   #hero .fs-69 {
@@ -533,6 +643,28 @@ footer .footer-bottom a:hover {
     background: var(--ligth-grey);
     border-radius: 0;
     border-bottom: 1px solid var(--grey);
+  }
+  #cartModal .fs-25 {
+    font-size: 20px;
+  }
+  #cartModal .fs-20 {
+    font-size: 16px;
+  }
+  #cartModal .info-icon img,
+  #cartModal .trash-icon img {
+    max-width: 24px;
+  }
+  #cartModal .modal-content {
+    padding: 30px 20px;
+  }
+  #cartModal .product-item {
+    flex-direction: column;
+  }
+  #cartModal .btn-actions-wraper {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
   }
 }
 

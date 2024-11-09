@@ -71,8 +71,12 @@
               <div
                 class="user-wraper d-flex align-items-center gap-1 gap-sm-3 order-1"
               >
-                <div class="menu-cart position-relative">
-                  <a href="#">
+                <div
+                  class="menu-cart position-relative cursor-pointer"
+                  data-bs-toggle="modal"
+                  data-bs-target="#cartModal"
+                >
+                  <a class="cursor-pointer">
                     <img
                       class="menu-cart-ico"
                       src="./icons/cart.svg"
@@ -412,6 +416,7 @@
     <!-- Footer pabaiga -->
 
     <!-- Outside of DOM elements -->
+    <!-- Mobile menu pradzia -->
 
     <div
       class="offcanvas offcanvas-end"
@@ -454,6 +459,180 @@
         </nav>
       </div>
     </div>
+    <!-- Mobile menu pabaiga -->
+
+    <!-- Cart modal pradzia -->
+    <div
+      class="modal fade"
+      id="cartModal"
+      tabindex="-1"
+      aria-labelledby="cartModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fs-30 fw-bold" id="cartModalLabel">
+              Jūsų krepšelis
+            </h5>
+            <button
+              type="button"
+              class="modal-btn"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <ul class="product-cart">
+              <li
+                class="product-item d-flex justify-content-between gap-3 gap-sm-5"
+              >
+                <div class="product-img">
+                  <img src="./img/window_5.png" alt="" />
+                </div>
+                <div class="d-flex gap-2 flex-grow-1 justify-content-between">
+                  <div class="product-summary">
+                    <div class="summary-wraper d-flex flex-column gap-2 h-100">
+                      <p class="mb-0 product-name fs-25 fw-bold cart-black-txt">
+                        Large window
+                      </p>
+                      <p
+                        class="mb-0 product-quantity fs-25 fw-bold cart-black-txt"
+                      >
+                        Qty: 1
+                      </p>
+                      <p
+                        class="mb-0 product-price fs-20 fw-bold cart-green-txt"
+                      >
+                        <span class="currency">$</span>69.99
+                      </p>
+                    </div>
+                  </div>
+                  <div class="actions-wraper d-flex gap-2">
+                    <button class="info-icon border-0 bg-transparent">
+                      <img
+                        src="./icons/exclamation_mark.svg"
+                        alt=""
+                        class="mt-1"
+                      />
+                    </button>
+                    <button class="trash-icon border-0 bg-transparent">
+                      <img src="./icons/trash.svg" alt="" />
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="product-item d-flex justify-content-between gap-3 gap-sm-5"
+              >
+                <div class="product-img">
+                  <img src="./img/window_6.png" alt="" />
+                </div>
+                <div class="d-flex gap-2 flex-grow-1 justify-content-between">
+                  <div class="product-summary">
+                    <div class="summary-wraper d-flex flex-column gap-2 h-100">
+                      <p class="mb-0 product-name fs-25 fw-bold cart-black-txt">
+                        Large window
+                      </p>
+                      <p
+                        class="mb-0 product-quantity fs-25 fw-bold cart-black-txt"
+                      >
+                        Qty: 1
+                      </p>
+                      <p
+                        class="mb-0 product-price fs-20 fw-bold cart-green-txt"
+                      >
+                        <span class="currency">$</span>69.99
+                      </p>
+                    </div>
+                  </div>
+                  <div class="actions-wraper d-flex gap-2">
+                    <button class="info-icon border-0 bg-transparent">
+                      <img
+                        src="./icons/exclamation_mark.svg"
+                        alt=""
+                        class="mt-1"
+                      />
+                    </button>
+                    <button class="trash-icon border-0 bg-transparent">
+                      <img src="./icons/trash.svg" alt="" />
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="product-item d-flex justify-content-between gap-3 gap-sm-5"
+              >
+                <div class="product-img">
+                  <img src="./img/window_7.png" alt="" />
+                </div>
+                <div class="d-flex gap-2 flex-grow-1 justify-content-between">
+                  <div class="product-summary">
+                    <div class="summary-wraper d-flex flex-column gap-2 h-100">
+                      <p class="mb-0 product-name fs-25 fw-bold cart-black-txt">
+                        Large window
+                      </p>
+                      <p
+                        class="mb-0 product-quantity fs-25 fw-bold cart-black-txt"
+                      >
+                        Qty: 1
+                      </p>
+                      <p
+                        class="mb-0 product-price fs-20 fw-bold cart-green-txt"
+                      >
+                        <span class="currency">$</span>69.99
+                      </p>
+                    </div>
+                  </div>
+                  <div class="actions-wraper d-flex gap-2">
+                    <button class="info-icon border-0 bg-transparent">
+                      <img
+                        src="./icons/exclamation_mark.svg"
+                        alt=""
+                        class="mt-1"
+                      />
+                    </button>
+                    <button class="trash-icon border-0 bg-transparent">
+                      <img src="./icons/trash.svg" alt="" />
+                    </button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer d-flex flex-column">
+            <div class="total-price d-flex justify-content-between m-0">
+              <p class="mb-0 fs-25 fw-bold cart-black-txt">Bendra suma</p>
+              <p class="mb-0 fs-20 fw-bold cart-green-txt">
+                <span class="currency">$</span>136.97
+              </p>
+            </div>
+            <div
+              class="btn-actions-wraper w-100 px-sm-5 d-flex justify-content-between"
+            >
+              <a
+                href="#"
+                type="button"
+                class="cart-btn btn-green"
+                data-bs-dismiss="modal"
+              >
+                Apmokėti
+              </a>
+              <a
+                href="#"
+                type="button"
+                class="cart-btn btn-dark"
+                data-bs-dismiss="modal"
+              >
+                Peržiūrėti krepšelį
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Cart modal pabaiga -->
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

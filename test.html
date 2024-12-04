@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Vigada</title>
+  </head>
+  <body>
+    <!-- Header pradzia -->
+    <header class="position-relative">
+      <div id="navigation" class="py-4">
+        <nav class="navbar py-0 container-xxl">
+          <div class="container-fluid px-0 d-flex justify-content-center">
+            <a class="navbar-brand p-0 mb-3 m-sm-0" href="/"
+              ><img src="./logo/vigada_logo.svg" alt="Vigada logo"
+            /></a>
+
+            <div
+              class="nav-user-wraper d-flex justify-content-between justify-content-sm-end gap-2 gap-sm-3 gap-lg-2 gap-xl-4 gap-xxl-5 flex-grow-1 flex-grow-sm-0"
+            >
+              <ul
+                class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center flex-row gap-xl-2 d-none d-lg-flex"
+              >
+                <li class="nav-item">
+                  <a
+                    class="nav-link active fs-14 lh-25"
+                    aria-current="page"
+                    href="#"
+                    >Apie mus</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-14 lh-25" href="#">Paslaugos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-14 lh-25" href="#">Darbų galerija</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-14 lh-25" href="#">Kontaktai</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-14 lh-25" href="#">ES parama</a>
+                </li>
+              </ul>
+              <div
+                class="d-lg-none hamburger-menu-wraper position-relative d-flex justify-content-center align-items-center order-2"
+                data-bs-toggle="offcanvas"
+                href="#mobileMenu"
+                role="button"
+                aria-controls="mobileMenu"
+              >
+                <button class="hamburger-menu position-relative"></button>
+              </div>
+              <div
+                class="user-wraper d-flex align-items-center gap-1 gap-sm-3 order-1"
+              >
+                <div
+                  class="menu-cart position-relative cursor-pointer"
+                  data-bs-toggle="modal"
+                  data-bs-target="#cartModal"
+                >
+                  <a class="cursor-pointer">
+                    <img
+                      class="menu-cart-ico"
+                      src="./icons/cart.svg"
+                      alt="Cart icon"
+                    />
+                    <div class="cart-items">4</div>
+                  </a>
+                </div>
+                <!-- Logged in user pradzia -->
+                <div class="logged-in-user-wraper d-flex gap-1 gap-sm-3">
+                  <div class="user-avatar">
+                    <img src="./img/avatar.webp" alt="" class="img-fluid" />
+                  </div>
+                  <div
+                    class="user-details-wraper d-flex align-items-center gap-2 gap-sm-3"
+                  >
+                    <div class="user-details">
+                      <p class="mb-0 fs-14 greeting-msg">Good Morning!</p>
+                      <p class="mb-0 fs-6 fw-bold">Jonas Petrauskas</p>
+                    </div>
+                    <div class="user-arrow-wraper">
+                      <a href="#">
+                        <img
+                          src="./icons/arrow_down.svg"
+                          alt="Arrow down icon"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Logged in user pabaiga -->
+                <!-- <a href="#" class="btn-main btn-white fs-14">Prisijunkite</a>
+                <a href="#" class="btn-main btn-dark fs-14">Registruotis</a> -->
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Header pabaiga -->
+
+    <main>
+      <!-- Cart hero pradzia -->
+      <!-- Cart hero pabaiga -->
+      <section id="cart-hero" class="position-relative">
+        <img
+          src="./img/cart_hero.webp"
+          alt="hero-image"
+          class="cart-hero-img"
+        />
+      </section>
+      <!-- Cart hero pabaiga -->
+      <!-- Product gallery/details pradzia -->
+      <section id="product-gallery-details">
+        <div class="container-xxl">
+          <div class="product-details-wraper">
+            <div class="product-gallery-details d-flex flex-column flex-md-row">
+              <div class="product-gallery pe-0 pe-md-3">
+                <nav aria-label="breadcrumb" class="ms-4 mb-4 d-md-none">
+                  <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="#">Pradžia</a></li>
+                    <li class="breadcrumb-item"><a href="#">Kategorija</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                      Produktas
+                    </li>
+                  </ol>
+                </nav>
+                <div
+                  class="main-media mb-4 d-flex justify-content-center align-items-center"
+                >
+                  <img
+                    id="mainImage"
+                    src="./img/lang_1.png"
+                    alt="Product Image"
+                    class="fade show img-fluid"
+                  />
+                  <video id="mainVideo" class="d-none max-w-full" loop>
+                    <source id="videoSource" src="" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div class="swiper-test">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide text-center">
+                      <img
+                        class="thumbnail"
+                        src="./img/lang_1.png"
+                        alt="Thumbnail 1"
+                        onclick="updateMainMedia('image', './img/lang_1.png')"
+                      />
+                    </div>
+                    <div class="swiper-slide text-center">
+                      <img
+                        class="thumbnail"
+                        src="./img/lang_2.png"
+                        alt="Thumbnail 2"
+                        onclick="updateMainMedia('image', './img/lang_2.png')"
+                      />
+                    </div>
+                    <div class="swiper-slide text-center">
+                      <img
+                        class="thumbnail"
+                        src="./img/lang_3.png"
+                        alt="Thumbnail 3"
+                        onclick="updateMainMedia('image', './img/lang_3.png')"
+                      />
+                    </div>
+                    <div class="swiper-slide text-center">
+                      <div class="video-wrap position-relative">
+                        <img
+                          class="thumbnail"
+                          src="./img/lang_4.png"
+                          alt="Thumbnail Video"
+                          onclick="updateMainMedia('image', './img/lang_4.png')"
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-slide text-center">
+                      <img
+                        class="thumbnail"
+                        src="./img/lang_3_video.webp"
+                        alt="Thumbnail Video"
+                        onclick="updateMainMedia('video', './img/test_video.mp4')"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-details mt-4 mt-md-0 ps-0 ps-md-3">
+                <nav
+                  aria-label="breadcrumb"
+                  class="ms-4 mb-4 d-none d-md-block"
+                >
+                  <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="#">Pradžia</a></li>
+                    <li class="breadcrumb-item"><a href="#">Kategorija</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                      Produktas
+                    </li>
+                  </ol>
+                </nav>
+                <div class="product-title">
+                  <h2 class="fs-28 fw-600 mb-2">Embrace Sideboard</h2>
+                  <p class="fs-6 mb-0">Teixeira Design Studio</p>
+                </div>
+                <div class="product-price-sale-wraper">
+                  <p class="fw-bold fs-34 mb-2">$71.56</p>
+                  <p class="mb-0 text-decoration-line-through fs-20">$71.56</p>
+                </div>
+                <form action="">
+                  <div class="product-color">
+                    <p class="mb-0 fs-12">Choose a Color</p>
+                    <div class="radio-group d-flex">
+                      <label class="custom-radio">
+                        <input type="radio" name="color" value="color-1" />
+                        <span class="checkmark color-1"></span>
+                      </label>
+                      <label class="custom-radio">
+                        <input type="radio" name="color" value="color-2" />
+                        <span class="checkmark color-2"></span>
+                      </label>
+                      <label class="custom-radio">
+                        <input type="radio" name="color" value="color-3" />
+                        <span class="checkmark color-3"></span>
+                      </label>
+                      <label class="custom-radio">
+                        <input type="radio" name="color" value="color-4" />
+                        <span class="checkmark color-4"></span>
+                      </label>
+                      <label class="custom-radio">
+                        <input type="radio" name="color" value="color-5" />
+                        <span class="checkmark color-5"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="product-options">
+                    <div class="mb-3">
+                      <label for="pasirinkimas-1" class="form-label fs-12 mb-0"
+                        >Plotis, mm</label
+                      >
+                      <input
+                        type="number"
+                        min="1"
+                        class="form-control"
+                        id="pasirinkimas-1"
+                        placeholder="min.: 150/ maks.:1700"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="pasirinkimas-2" class="form-label fs-12 mb-0"
+                        >Plotis, mm</label
+                      >
+                      <input
+                        type="number"
+                        min="1"
+                        class="form-control"
+                        id="pasirinkimas-2"
+                        placeholder="min.: 150/ maks.:1700"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="pasirinkimas-2" class="form-label fs-12 mb-0"
+                        >Plotis, mm</label
+                      >
+                      <input
+                        type="number"
+                        min="1"
+                        class="form-control"
+                        id="pasirinkimas-2"
+                        placeholder="min.: 150/ maks.:1700"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="pasirinkimas-4" class="form-label fs-12 mb-0"
+                        >Plotis, mm</label
+                      >
+                      <input
+                        type="number"
+                        min="1"
+                        class="form-control"
+                        id="pasirinkimas-4"
+                        placeholder="min.: 150/ maks.:1700"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="product-add-to-cart d-flex justify-content-center gap-4"
+                  >
+                    <div
+                      class="quantity-wraper d-flex justify-content-center align-items-center"
+                    >
+                      <button
+                        type="button"
+                        class="decrease-button"
+                        aria-label="Decrease quantity"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        value="1"
+                        min="1"
+                        aria-label="Quantity"
+                        class="quantity-number"
+                      />
+                      <button
+                        type="button"
+                        class="increase-button"
+                        aria-label="Increase quantity"
+                      >
+                        +
+                      </button>
+                    </div>
+                    <button type="submit" class="add-to-cart-btn-large-green">
+                      <img src="./icons/cart_icon_white.svg" />Add To Cart
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="product-description">
+              <div class="description-wraper">
+                <h3 class="fs-6 ms-3 fw-600">Description</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Product gallery/details pabaiga -->
+    </main>
+    <!-- Footer pradzia -->
+    <footer>
+      <div class="container-xxl">
+        <div
+          class="footer-container px-3 py-4 p-sm-5 d-flex flex-column flex-lg-row gap-5"
+        >
+          <div
+            class="logo-newsletter-wraper d-flex flex-column gap-3 max-w-650"
+          >
+            <div>
+              <img src="./logo/logo_white.svg" alt="Vigada white logo" />
+            </div>
+            <p class="mb-0 fs-14">
+              Prisijunkite prie mūsų naujienlaiškio, kad būtumėte informuoti
+              apie naujausias funkcijas ir leidimus.
+            </p>
+            <form
+              class="newsletter-wraper d-flex flex-column flex-sm-row gap-4"
+            >
+              <label
+                for="email"
+                class="visually-hidden"
+                aria-label="El. pastas"
+              ></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="flex-grow-1"
+                placeholder="Įveskite savo el. paštą"
+              />
+              <button type="submit" class="footer-btn fs-14 fw-600">
+                Prenumeruoti
+              </button>
+            </form>
+            <p class="mb-0 fs-14">
+              Prenumeruodami sutinkate su mūsų privatumo politika ir suteikiate
+              sutikimą gauti naujienas iš mūsų įmonės
+            </p>
+          </div>
+          <div
+            class="links-wraper d-flex gap-4 gap-sm-2 justify-content-sm-between flex-wrap"
+          >
+            <div class="max-w-170">
+              <p class="mb-4 fs-12 fw-600 text-uppercase">Explore more</p>
+              <ul class="d-flex flex-column gap-3">
+                <li><a href="#" class="fs-14">Apie mus</a></li>
+                <li><a href="#" class="fs-14">Paslaugos</a></li>
+                <li><a href="#" class="fs-14">Darbų galerija</a></li>
+                <li><a href="#" class="fs-14">Kontaktai</a></li>
+                <li><a href="#" class="fs-14">ES parama</a></li>
+              </ul>
+            </div>
+            <div class="max-w-170">
+              <p class="mb-4 fs-12 fw-600 text-uppercase">Stay Connected</p>
+              <ul class="d-flex flex-column gap-3">
+                <li>
+                  <a href="mailto:info@vigada.lt" class="fs-14"
+                    >info@vigada.lt</a
+                  >
+                </li>
+                <li>
+                  <a href="tel:+37061865033" class="fs-14"
+                    >Tel. (+370 618) 650 33</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="fs-14"
+                    >Apaščios g. 35, Anglininkų k. LT-41105 Biržų raj.,
+                    Lietuva</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="max-w-170">
+              <p class="mb-4 fs-12 fw-600 text-uppercase">Follow Us</p>
+              <ul class="d-flex flex-column gap-3">
+                <li><a href="#" class="fs-14">Facebook</a></li>
+                <li><a href="#" class="fs-14">Instagram</a></li>
+                <li><a href="#" class="fs-14">LinkedIn</a></li>
+                <li><a href="#" class="fs-14">Youtube</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="footer-bottom d-flex flex-column flex-md-row justify-content-between gap-2 gap-md-0"
+        >
+          <p class="mb-0 fs-14">
+            &copy; 2015 - <span id="current-year"></span> UAB Vigada. All rights
+            reserved.
+          </p>
+          <ul class="d-flex gap-4">
+            <li>
+              <a href="#" class="fs-14"><u>Privacy policy</u></a>
+            </li>
+            <li>
+              <a href="#" class="fs-14"><u>Terms of Service</u></a>
+            </li>
+            <li>
+              <a href="#" class="fs-14"><u>Cookies Settings</u></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer pabaiga -->
+
+    <!-- Outside of DOM elements -->
+    <!-- Mobile menu pradzia -->
+
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="mobileMenu"
+      aria-labelledby="offcanvasMobileMenuLabel"
+    >
+      <div class="offcanvas-header">
+        <button
+          type="button"
+          class="btn-close text-reset ms-auto"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <nav class="mobile-menu">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link active fs-14 lh-25"
+                aria-current="page"
+                href="#"
+                >Apie mus</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-14 lh-25" href="#">Paslaugos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-14 lh-25" href="#">Darbų galerija</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-14 lh-25" href="#">Kontaktai</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-14 lh-25" href="#">ES parama</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- Mobile menu pabaiga -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
+    <script>
+      // Function to toggle play/pause on the video
+      function toggleVideoPlayback() {
+        const video = document.getElementById("mainVideo");
+
+        if (video.paused) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      }
+    </script>
+  </body>
+</html>

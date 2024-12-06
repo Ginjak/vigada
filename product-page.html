@@ -15,6 +15,10 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./styles.css" />
     <title>Vigada</title>
   </head>
@@ -128,11 +132,18 @@
       <!-- Product gallery/details pradzia -->
       <section id="product-gallery-details">
         <div class="container-xxl">
-          <div class="product-gallery-details-wraper d-flex">
-            <div
-              class="gallery w-100 d-flex flex-column justify-content-md-between"
-            >
-              <div class="product-gallery mb-3 mb-md-5">
+          <div class="product-details-wraper">
+            <div class="product-gallery-details d-flex flex-column flex-md-row">
+              <div class="product-gallery pe-0 pe-md-3">
+                <nav aria-label="breadcrumb" class="ms-4 mb-4 d-md-none">
+                  <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="#">Pradžia</a></li>
+                    <li class="breadcrumb-item"><a href="#">Kategorija</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                      Produktas
+                    </li>
+                  </ol>
+                </nav>
                 <div
                   class="main-media mb-4 d-flex justify-content-center align-items-center"
                 >
@@ -142,62 +153,286 @@
                     alt="Product Image"
                     class="fade show img-fluid"
                   />
-                  <video id="mainVideo" class="d-none max-w-full" muted>
+                  <video id="mainVideo" class="d-none max-w-full" loop>
                     <source id="videoSource" src="" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 </div>
-                <div
-                  class="thumbnails d-flex justify-content-start justify-content-md-between flex-wrap gap-3"
-                >
-                  <div
-                    class="thumb-img-wraper d-flex justify-content-center align-items-center position-relative"
-                  >
-                    <img
-                      class="thumbnail"
-                      src="./img/lang_1.png"
-                      alt="Thumbnail 1"
-                      onclick="updateMainMedia('image', './img/lang_1.png')"
-                    />
-                  </div>
-                  <div
-                    class="thumb-img-wraper d-flex justify-content-center align-items-center position-relative"
-                  >
-                    <img
-                      class="thumbnail"
-                      src="./img/lang_2.png"
-                      alt="Thumbnail 2"
-                      onclick="updateMainMedia('image', './img/lang_2.png')"
-                    />
-                  </div>
-                  <div
-                    class="thumb-img-wraper d-flex justify-content-center align-items-center position-relative"
-                  >
-                    <img
-                      class="thumbnail"
-                      src="./img/lang_3.png"
-                      alt="Thumbnail 3"
-                      onclick="updateMainMedia('image', './img/lang_3.png')"
-                    />
-                  </div>
-                  <div
-                    class="thumb-img-wraper d-flex justify-content-center align-items-center position-relative"
-                  >
-                    <img
-                      class="thumbnail"
-                      src="./img/lang_3.png"
-                      alt="Thumbnail Video"
-                      onclick="updateMainMedia('video', './img/test_video.mp4')"
-                    />
+                <div class="swiper-test">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide text-center">
+                      <img
+                        class="thumbnail"
+                        src="./img/lang_1.png"
+                        alt="Thumbnail 1"
+                        onclick="updateMainMedia('image', './img/lang_1.png')"
+                      />
+                    </div>
+                    <div class="swiper-slide text-center">
+                      <img
+                        class="thumbnail"
+                        src="./img/lang_2.png"
+                        alt="Thumbnail 2"
+                        onclick="updateMainMedia('image', './img/lang_2.png')"
+                      />
+                    </div>
+                    <div class="swiper-slide text-center">
+                      <img
+                        class="thumbnail"
+                        src="./img/lang_3.png"
+                        alt="Thumbnail 3"
+                        onclick="updateMainMedia('image', './img/lang_3.png')"
+                      />
+                    </div>
+                    <div class="swiper-slide text-center">
+                      <div class="video-wrap position-relative">
+                        <img
+                          class="thumbnail"
+                          src="./img/lang_4.png"
+                          alt="Thumbnail Video"
+                          onclick="updateMainMedia('image', './img/lang_4.png')"
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-slide text-center">
+                      <img
+                        class="thumbnail"
+                        src="./img/lang_3_video.webp"
+                        alt="Thumbnail Video"
+                        onclick="updateMainMedia('video', './img/test_video.mp4')"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
+
+              <div class="product-details mt-4 mt-md-0 ps-0 ps-md-3">
+                <nav
+                  aria-label="breadcrumb"
+                  class="ms-4 mb-4 d-none d-md-block"
+                >
+                  <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="#">Pradžia</a></li>
+                    <li class="breadcrumb-item"><a href="#">Kategorija</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                      Produktas
+                    </li>
+                  </ol>
+                </nav>
+                <div class="product-title">
+                  <h2 class="fs-28 fw-600 mb-2">Embrace Sideboard</h2>
+                  <p class="fs-6 mb-0">Teixeira Design Studio</p>
+                </div>
+                <div class="product-price-sale-wraper">
+                  <p class="fw-bold fs-34 mb-2">$71.56</p>
+                  <p class="mb-0 text-decoration-line-through fs-20">$71.56</p>
+                </div>
+                <form action="">
+                  <div class="product-color">
+                    <p class="mb-0 fs-12">Choose a Color</p>
+                    <div class="radio-group d-flex">
+                      <label class="custom-radio">
+                        <input type="radio" name="color" value="color-1" />
+                        <span class="checkmark color-1"></span>
+                      </label>
+                      <label class="custom-radio">
+                        <input type="radio" name="color" value="color-2" />
+                        <span class="checkmark color-2"></span>
+                      </label>
+                      <label class="custom-radio">
+                        <input type="radio" name="color" value="color-3" />
+                        <span class="checkmark color-3"></span>
+                      </label>
+                      <label class="custom-radio">
+                        <input type="radio" name="color" value="color-4" />
+                        <span class="checkmark color-4"></span>
+                      </label>
+                      <label class="custom-radio">
+                        <input type="radio" name="color" value="color-5" />
+                        <span class="checkmark color-5"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="product-options">
+                    <div class="mb-3">
+                      <label for="pasirinkimas-1" class="form-label fs-12 mb-0"
+                        >Plotis, mm</label
+                      >
+                      <input
+                        type="number"
+                        min="1"
+                        class="form-control"
+                        id="pasirinkimas-1"
+                        placeholder="min.: 150/ maks.:1700"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="pasirinkimas-2" class="form-label fs-12 mb-0"
+                        >Plotis, mm</label
+                      >
+                      <input
+                        type="number"
+                        min="1"
+                        class="form-control"
+                        id="pasirinkimas-2"
+                        placeholder="min.: 150/ maks.:1700"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="pasirinkimas-2" class="form-label fs-12 mb-0"
+                        >Plotis, mm</label
+                      >
+                      <input
+                        type="number"
+                        min="1"
+                        class="form-control"
+                        id="pasirinkimas-2"
+                        placeholder="min.: 150/ maks.:1700"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="pasirinkimas-4" class="form-label fs-12 mb-0"
+                        >Plotis, mm</label
+                      >
+                      <input
+                        type="number"
+                        min="1"
+                        class="form-control"
+                        id="pasirinkimas-4"
+                        placeholder="min.: 150/ maks.:1700"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="product-add-to-cart d-flex justify-content-center gap-4"
+                  >
+                    <div
+                      class="quantity-wraper d-flex justify-content-center align-items-center"
+                    >
+                      <button
+                        type="button"
+                        class="decrease-button"
+                        aria-label="Decrease quantity"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        value="1"
+                        min="1"
+                        aria-label="Quantity"
+                        class="quantity-number"
+                      />
+                      <button
+                        type="button"
+                        class="increase-button"
+                        aria-label="Increase quantity"
+                      >
+                        +
+                      </button>
+                    </div>
+                    <button type="submit" class="add-to-cart-btn-large-green">
+                      <img src="./icons/cart_icon_white.svg" />Add To Cart
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
-            <div class="product-details-wraper">
-              <p>tests</p>
+            <div class="product-description">
+              <div class="description-title mb-5">
+                <h3 class="fs-6 ms-3 fw-600">Description</h3>
+              </div>
+              <div class="description-wraper max-w-1054">
+                <h5 class="mb-3 fs-4 fw-bold">Product Description</h5>
+                <p class="mb-5 fs-6">
+                  When it's colder than the far side of the moon and spitting
+                  rain too, you've still got to look good. From water-repellent
+                  leather to a rugged outsole, the Lunar Force 1 adapts AF-1
+                  style, so you can keep your flame burning when the weather
+                  hits. Metal lace hardware and extended tongue bring mountain
+                  boot toughness, while the star-studded toe design gives your
+                  look the edge
+                </p>
+                <h5 class="mb-3 fs-4 fw-bold">Benefits</h5>
+                <ul class="d-flex flex-column gap-3 mb-5">
+                  <li class="d-flex align-items-center fs-6 gap-2">
+                    <img src="./icons/tick_icon.svg" alt="Tick icon" />Durable
+                    leather is easily cleanable so you can keep your look fresh.
+                  </li>
+                  <li class="d-flex align-items-center fs-6 gap-2">
+                    <img
+                      src="./icons/tick_icon.svg"
+                      alt="Tick icon"
+                    />Water-repellent finish and internal membrane help keep
+                    your feet dry.
+                  </li>
+                  <li class="d-flex align-items-center fs-6 gap-2">
+                    <img src="./icons/tick_icon.svg" alt="Tick icon" />Toe piece
+                    with star pattern adds durability.
+                  </li>
+                  <li class="d-flex align-items-center fs-6 gap-2">
+                    <img src="./icons/tick_icon.svg" alt="Tick icon" />Synthetic
+                    insulation helps keep you warm.
+                  </li>
+                  <li class="d-flex align-items-center fs-6 gap-2">
+                    <img
+                      src="./icons/tick_icon.svg"
+                      alt="Tick icon"
+                    />Originally designed for performance hoops, the Air unit
+                    delivers lightweight cushioning.
+                  </li>
+                  <li class="d-flex align-items-center fs-6 gap-2">
+                    <img src="./icons/tick_icon.svg" alt="Tick icon" />Plush
+                    tongue wraps over the ankle to help keep out the moisture
+                    and cold.
+                  </li>
+                  <li class="d-flex align-items-center fs-6 gap-2">
+                    <img src="./icons/tick_icon.svg" alt="Tick icon" />Rubber
+                    outsole with aggressive traction pattern adds durable grip.
+                  </li>
+                  <li class="d-flex align-items-center fs-6 gap-2">
+                    <img src="./icons/tick_icon.svg" alt="Tick icon" />Durable
+                    leather is easily cleanable so you can keep your look fresh.
+                  </li>
+                </ul>
+                <h5 class="mb-3 fs-4 fw-bold">Product Details</h5>
+                <ul class="d-flex flex-column gap-3 mb-5">
+                  <li class="d-flex align-items-center fs-6 gap-2">
+                    <img src="./icons/tick_icon.svg" alt="Tick icon" />Not
+                    intended for use as Personal Protective Equipment (PPE)
+                  </li>
+                  <li class="d-flex align-items-center fs-6 gap-2">
+                    <img
+                      src="./icons/tick_icon.svg"
+                      alt="Tick icon"
+                    />Water-repellent finish and internal membrane help keep
+                    your feet dry.
+                  </li>
+                </ul>
+                <h5 class="mb-3 fs-4 fw-bold">More Details</h5>
+                <ul class="d-flex flex-column gap-3 mb-5">
+                  <li class="d-flex align-items-center fs-6 gap-2">
+                    <img src="./icons/tick_icon.svg" alt="Tick icon" />Lunarlon
+                    midsole delivers ultra-plush responsiveness
+                  </li>
+                  <li class="d-flex align-items-center fs-6 gap-2">
+                    <img
+                      src="./icons/tick_icon.svg"
+                      alt="Tick icon"
+                    />Encapsulated Air-Sole heel unit for lightweight cushioning
+                  </li>
+                  <li class="d-flex align-items-center fs-6 gap-2">
+                    <img src="./icons/tick_icon.svg" alt="Tick icon" />Colour
+                    Shown: Ale Brown/Black/Goldtone/Ale Brown
+                  </li>
+                  <li class="d-flex align-items-center fs-6 gap-2">
+                    <img src="./icons/tick_icon.svg" alt="Tick icon" />Style:
+                    805899-202
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="product-description"></div>
         </div>
       </section>
       <!-- Product gallery/details pabaiga -->
@@ -361,22 +596,19 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
     <script>
-      document
-        .getElementById("mainVideo")
-        .addEventListener("click", function () {
-          console.log("Video was clicked"); // This should appear in the console
-          const mainVideo = document.getElementById("mainVideo");
+      // Function to toggle play/pause on the video
+      function toggleVideoPlayback() {
+        const video = document.getElementById("mainVideo");
 
-          if (mainVideo.paused) {
-            mainVideo.play();
-            console.log("Video started playing");
-          } else {
-            mainVideo.pause();
-            console.log("Video paused");
-          }
-        });
+        if (video.paused) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      }
     </script>
   </body>
 </html>

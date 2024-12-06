@@ -215,6 +215,7 @@ ul {
   border: 1px solid var(--humble-black);
   background: var(--white);
   transition: all 0.2s linear;
+  color: var(--humble-black);
 }
 
 .footer-btn:hover {
